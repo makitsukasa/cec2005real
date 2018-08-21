@@ -32,7 +32,7 @@
 #include "def2.cc"
 #include "def3.cc"
 #include "def4.cc"
-#include "aux.cc"
+#include "auxillary.cc"
 #include "srandom.cc"
 #include "random.cc"
 #include "rand.cc"
