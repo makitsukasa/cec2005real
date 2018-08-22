@@ -2,6 +2,8 @@ PROJECT(cec2005 CXX)
 
 SET(CECSRC
   cec2005
+  auxillary.cc
+  rand.cc
   random.cc
   srandom.cc
 )
@@ -12,7 +14,7 @@ def1.cc
 def2.cc
 def3.cc
 def4.cc
-#rand.cc
+rand.cc
 random.cc
 srandom.cc
 #sprng/SRC/lcg64/primes.c

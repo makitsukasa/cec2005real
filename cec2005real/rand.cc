@@ -1,18 +1,18 @@
 /**
  * Copyright 2008, Daniel Molina Cabrera
- * 
+ *
  * This file is part of software Realea
- * 
+ *
  * Realea is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * Realea is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -77,12 +77,6 @@ void initrandomnormaldeviate()
     return;
 }
 
-/* Return the noise value */
-long double noise (long double mu, long double sigma)
-{
-    return((randomnormaldeviate()*sigma) + mu);
-}
-
 /* Compute the noise */
 long double randomnormaldeviate()
 {
@@ -101,3 +95,10 @@ long double randomnormaldeviate()
         return(rndx1*rndx2);
     }
 }
+
+/* Return the noise value */
+long double noise (long double mu, long double sigma)
+{
+    return((randomnormaldeviate()*sigma) + mu);
+}
+
