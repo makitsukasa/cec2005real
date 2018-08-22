@@ -57,3 +57,8 @@ target/
 *~
 *TAGS
 GPATH
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+cec2005real/Makefile
