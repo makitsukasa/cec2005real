@@ -24,7 +24,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
-#include "random.h"
+#include "rand.h"
 #include "srandom.h"
 
 static Random *m_random;
