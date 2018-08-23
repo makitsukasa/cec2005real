@@ -32,6 +32,8 @@ class IRealRandom {
 	* @return A random double between 0 and 1 
 	*/
 public:
+       virtual ~IRealRandom() {}
+
        virtual double rand(void)=0;
 };
 
