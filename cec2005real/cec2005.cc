@@ -115,7 +115,7 @@ static CECFUNCTION cec2005Fun[] = {
 	{25, "Rotated Hybrid Composition Function 4 without Bounds", {2, 5}, 260}
 };
 
-static int cec2005FunSize = 25;
+constexpr int cec2005FunSize = 25;
 
 /**
  * Permite obtener la informaci�n sobre la funci�n
