@@ -49,3 +49,5 @@ TARGET_LINK_LIBRARIES(cec2005)
 
 #ADD_EXECUTABLE(test test.cc)
 #TARGET_LINK_LIBRARIES(test cec2005)
+
+set(CMAKE_CXX_FLAGS "-std=c++17 -pedantic")
