@@ -138,6 +138,7 @@ void getInfo_cec2005(int fun, char *name, double *min, double *max, double *opti
  * La funci�n eval del CEC2005
  */
 double eval_cec2005(const long double *x, int ndim) {
+	(void)ndim;
     double optime = cec2005Fun[nfunc-1].optime;
     long double *y = (long double*) x;
     double fit = calc_benchmark_func(y)-optime;
