@@ -24,10 +24,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
-#include "random.h"
+# include <memory>
+#include "rand.h"
 #include "srandom.h"
 
-static Random *m_random;
+static std::unique_ptr<Random> m_random;
 /* Variable declarations for the random number generator */
 int rndcalcflag;
 long double rndx1, rndx2;
@@ -36,7 +37,7 @@ long double rndx1, rndx2;
 /* Get seed number for random and start it up */
 void randomize()
 {
-    m_random = new Random(new SRandom(1234579));
+    m_random = std::make_unique<Random>(new SRandom(1234579));
 }
 
 /* Fetch a single random number between 0.0 and 1.0 */

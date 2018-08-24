@@ -18,7 +18,7 @@
  */
 
 #include "srandom.h"
-#include <string>
+#include <stdexcept>
 
 void SRandom::setSeed(unsigned long seed) {
    m_seed = seed;
@@ -53,7 +53,7 @@ double  SRandom::rand(void) {
  	j=(int)(1 + 97.0*(iy)/M);  
  
  	if (j > 97 || j < 1)
- 		throw new std::string("Failure in random number generator");
+ 		throw std::out_of_range("Failure in random number generator");
  
  	iy=ir[j];
  	idum=(IA*(idum)+IC) % M;

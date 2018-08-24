@@ -25,6 +25,7 @@
 
 #include <assert.h>
 #include <string>
+#include <vector>
 #include "global.h"
 #include "sub.h"
 
@@ -80,10 +81,10 @@ void finish_cec2005(void) {
 }
 
 struct CECFUNCTION {
-   int ident; 		/**< Parámetro identificador de la función */
-   string name; 	/**< Nombre de la función (para poder mostrarla en pantalla */
-   double range[2];	        /**< Guarda los valores mínimos y máximos para dicha función */
-   double optime;    	/**< Valor óptimo */
+   int ident; 		/**< Parï¿½metro identificador de la funciï¿½n */
+   string name; 	/**< Nombre de la funciï¿½n (para poder mostrarla en pantalla */
+   double range[2];	        /**< Guarda los valores mï¿½nimos y mï¿½ximos para dicha funciï¿½n */
+   double optime;    	/**< Valor ï¿½ptimo */
 };
 
 static CECFUNCTION cec2005Fun[] = {
@@ -114,10 +115,10 @@ static CECFUNCTION cec2005Fun[] = {
 	{25, "Rotated Hybrid Composition Function 4 without Bounds", {2, 5}, 260}
 };
 
-static int cec2005FunSize = 25;
+constexpr int cec2005FunSize = 25;
 
 /**
- * Permite obtener la información sobre la función
+ * Permite obtener la informaciï¿½n sobre la funciï¿½n
  */
 void getInfo_cec2005(int fun, char *name, double *min, double *max, double *optime) {
    int id;
@@ -134,9 +135,10 @@ void getInfo_cec2005(int fun, char *name, double *min, double *max, double *opti
 }
 
 /**
- * La función eval del CEC2005
+ * La funciï¿½n eval del CEC2005
  */
 double eval_cec2005(const long double *x, int ndim) {
+	(void)ndim;
     double optime = cec2005Fun[nfunc-1].optime;
     long double *y = (long double*) x;
     double fit = calc_benchmark_func(y)-optime;
@@ -146,13 +148,13 @@ double eval_cec2005(const long double *x, int ndim) {
 
 double eval_cec2005(const double *x, int ndim) {
     double optime = cec2005Fun[nfunc-1].optime;
-    long double y[ndim];
+    std::vector<long double> y(ndim);
 
     for (int i = 0; i < ndim; ++i) {
 	y[i] = x[i];
     }
 
-    double fit = calc_benchmark_func(y)-optime;
+    double fit = calc_benchmark_func(y.data())-optime;
 
     if (fit < 0) {
 	fprintf(stderr, "Value: %le\tOptime: %le\n", fit, optime);

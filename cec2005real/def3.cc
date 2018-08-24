@@ -113,7 +113,7 @@ void initialize_f2()
 void initialize_f3()
 {
     int i, j;
-    FILE *fpt;
+    FILE *fpt = NULL;
     if (nreal==2) fpt = myopen("elliptic_M_D2.txt","r");
     if (nreal==10) fpt = myopen("elliptic_M_D10.txt","r");
     if (nreal==30) fpt = myopen("elliptic_M_D30.txt","r");
@@ -270,7 +270,7 @@ void initialize_f6()
 void initialize_f7()
 {
     int i, j;
-    FILE *fpt;
+    FILE *fpt = NULL;
     if (nreal==2)    fpt = myopen("griewank_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("griewank_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("griewank_M_D30.txt","r");
@@ -312,7 +312,7 @@ void initialize_f8()
 {
     int i, j;
     int index;
-    FILE *fpt;
+    FILE *fpt = NULL;
     if (nreal==2)    fpt = myopen("ackley_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("ackley_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("ackley_M_D30.txt","r");
@@ -381,7 +381,7 @@ void initialize_f9()
 void initialize_f10()
 {
     int i, j;
-    FILE *fpt;
+    FILE *fpt = NULL;
     if (nreal==2)    fpt = myopen("rastrigin_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("rastrigin_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("rastrigin_M_D30.txt","r");
@@ -422,7 +422,7 @@ void initialize_f10()
 void initialize_f11()
 {
     int i, j;
-    FILE *fpt;
+    FILE *fpt = NULL;
     if (nreal==2)    fpt = myopen("weierstrass_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("weierstrass_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("weierstrass_M_D30.txt","r");
@@ -567,7 +567,7 @@ void initialize_f13()
 void initialize_f14()
 {
     int i, j;
-    FILE *fpt;
+    FILE *fpt = NULL;
     if (nreal==2)    fpt = myopen("E_ScafferF6_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("E_ScafferF6_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("E_ScafferF6_M_D30.txt","r");
@@ -1397,7 +1397,7 @@ void initialize(void) {
       calc_benchmark_norm_f25();
    }
 else {
-   printf("Error: num %d no válido\n", num);
+   printf("Error: num %d no vï¿½lido\n", num);
    exit(1);
 }
 
