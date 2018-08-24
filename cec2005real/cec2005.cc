@@ -54,11 +54,13 @@ void init_cec2005(int fun, int dim) {
         fprintf(stderr,"\n Wrong value of 'nfun' entered\n");
         exit(0);
     }
+    /*
     if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
     {
         fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
         exit(0);
     }
+    */
 
     /* Call these routines to initialize random number generator */
     /* require for computing noise in some test problems */

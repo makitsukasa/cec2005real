@@ -114,6 +114,11 @@ void initialize_f3()
 {
     int i, j;
     FILE *fpt;
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2) fpt = myopen("elliptic_M_D2.txt","r");
     if (nreal==10) fpt = myopen("elliptic_M_D10.txt","r");
     if (nreal==30) fpt = myopen("elliptic_M_D30.txt","r");
@@ -271,6 +276,11 @@ void initialize_f7()
 {
     int i, j;
     FILE *fpt;
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("griewank_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("griewank_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("griewank_M_D30.txt","r");
@@ -313,6 +323,11 @@ void initialize_f8()
     int i, j;
     int index;
     FILE *fpt;
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("ackley_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("ackley_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("ackley_M_D30.txt","r");
@@ -382,6 +397,11 @@ void initialize_f10()
 {
     int i, j;
     FILE *fpt;
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("rastrigin_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("rastrigin_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("rastrigin_M_D30.txt","r");
@@ -423,6 +443,11 @@ void initialize_f11()
 {
     int i, j;
     FILE *fpt;
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("weierstrass_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("weierstrass_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("weierstrass_M_D30.txt","r");
@@ -568,6 +593,11 @@ void initialize_f14()
 {
     int i, j;
     FILE *fpt;
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("E_ScafferF6_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("E_ScafferF6_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("E_ScafferF6_M_D30.txt","r");
@@ -671,6 +701,11 @@ void initialize_f16()
 //        printf("\n");
     }
     fclose(fpt);
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func1_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func1_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func1_M_D30.txt","r");
@@ -732,6 +767,11 @@ void initialize_f17()
 //        printf("\n");
     }
     fclose(fpt);
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func1_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func1_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func1_M_D30.txt","r");
@@ -801,6 +841,11 @@ void initialize_f18()
 	o[9][j] = 0.0;
     }
 
+if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func2_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func2_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func2_M_D30.txt","r");
@@ -884,6 +929,11 @@ void initialize_f19()
 	o[9][j] = 0.0;
     }
 
+if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func2_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func2_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func2_M_D30.txt","r");
@@ -973,6 +1023,11 @@ void initialize_f20()
     {
         o[0][2*i-1] = 5.0;
     }
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func2_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func2_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func2_M_D30.txt","r");
@@ -1048,6 +1103,11 @@ void initialize_f21()
 //        printf("\n");
     }
     fclose(fpt);
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func3_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func3_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func3_M_D30.txt","r");
@@ -1119,6 +1179,11 @@ void initialize_f22()
 //        printf("\n");
     }
     fclose(fpt);
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func3_HM_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func3_HM_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func3_HM_D30.txt","r");
@@ -1190,6 +1255,11 @@ void initialize_f23()
 //        printf("\n");
     }
     fclose(fpt);
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func3_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func3_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func3_M_D30.txt","r");
@@ -1262,6 +1332,11 @@ void initialize_f24()
 //        printf("\n");
     }
     fclose(fpt);
+    if (nreal!=2 && nreal!=10 && nreal!=30 && nreal!=50)
+    {
+        fprintf(stderr,"\n Wrong value of 'nreal' entered, only 2, 10, 30, 50 variables are supported\n");
+        exit(0);
+    }
     if (nreal==2)    fpt = myopen("hybrid_func4_M_D2.txt","r");
     if (nreal==10)    fpt = myopen("hybrid_func4_M_D10.txt","r");
     if (nreal==30)    fpt = myopen("hybrid_func4_M_D30.txt","r");
